@@ -1,0 +1,22 @@
+html,body{
+    background-color: lightgray;
+}
+
+hr{height: 5px; background-color:black}
+.column{
+    border-left: thick solid #000;
+    height:100%;
+    left: 70%;
+    position: absolute;
+   }
+#main{
+    background-color: rgba(0, 0, 0, 0.255);
+    margin-left: 3%;
+    margin-right: 20%;
+
+}
+#main1{
+    background-color: rgba(0, 0, 0, 0.255);
+    margin-left: 85%;
+    text-align: center;
+}
