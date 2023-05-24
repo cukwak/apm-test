@@ -1,0 +1,9 @@
+html,body{
+    background-color: lightgray;
+}
+
+hr{height: 5px; background-color:black}
+
+#main{
+    background: gray;
+}
