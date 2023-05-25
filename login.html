@@ -1,18 +1,15 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>로그인</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <form name = "register" method="post" action = "registerpc.php">
-    <div id="main">Login<br>
-        <input type="text" placeholder="ID" class="in" name="userID" required>
-        <input type="password" placeholder="PASSWORD" class="in" name="userPW" required>
-        <br>
-        <input type="submit" id = "btn" value="login">
-    </div> 
+    <form name="login" method="post" action="loginAction.php">
+        <h1 style="text-align: center">로그인</h1>
+        <input type="text" placeholder="아이디" class="in" name="userID" required>
+        <input type="password" placeholder="비밀번호" class="in" name="userPW" required>
+        <input type="submit" id="btn" value="로그인"><br>
     </form>
 </body>
 </html>
