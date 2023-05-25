@@ -22,7 +22,7 @@ if($list) {
 }else{
     echo "<script>
         alert('login failed');
-        location.replace('main.html');
+        location.replace('login.html');
         </script>";
 }
 
