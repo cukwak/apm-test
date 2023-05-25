@@ -11,13 +11,13 @@ $sql = "INSERT INTO users (username, id, password, created)
 if(mysqli_query($conn, $sql)){
     echo "<script>
         alert('Sucessfully registered');
-        location.replace('login.html');
+        location.replace('index.php');
         </script>";
 }
 else{
     echo "<script>
     alert('Register failed');
-    location.replace('register.html');
+    location.replace('index.php');
     </script>";
 }
 
