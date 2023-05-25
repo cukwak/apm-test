@@ -1,17 +1,16 @@
 html,body{
     background-color: lightgray;
 }
-#main{
+.main{
     background: gray;
     border-style: outset;
-    border;
     width : 250px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
     text-align: center;  
 }
-#main-1{
+.main-1{
     margin: 0 auto;
     background-color: rgb(230, 222, 222);
     width: 150px;

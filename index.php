@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div id = main ><br>
-        <div id = main-1>
+    <div class = "main" ><br>
+        <div class = "main-1">
             Sever Management
         </div><br>
         <a href = "register.html">        
