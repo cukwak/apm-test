@@ -12,7 +12,7 @@ $arr = mysqli_fetch_array($result);
 echo"<br><br>";
 if($list) {
     session_start();
-    $_SESSION['username'] = $username;
+    $_SESSION['username'] = $arr['username'];
     $_SESSION['id'] = $id;
     $_SESSION['password'] = $password;
     echo "<script>

@@ -6,7 +6,6 @@ mysqli_set_charset($conn, 'utf8');
 $sql = "SELECT * FROM users WHERE session_id = '$sessionId'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
-
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +19,7 @@ $row = mysqli_fetch_assoc($result);
 <body>
     <div class="user-info">
         <span>
-            echo "username; ".$row['username'];
+           <? echo "username; ".$row['username'];?>
         </span>
         <a href="logout.php">
         <input type="button" value="logout" onclick="alert">
