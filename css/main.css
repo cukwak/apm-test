@@ -1,9 +1,42 @@
-html,body{
+body {
     background-color: lightgray;
+    margin: 0;
+    padding: 20px;
 }
-
 hr{height: 5px; background-color:black}
 
-#main{
-    background: gray;
+h1 {
+    text-align: center;
+}
+.container {
+background-color: rgba(155, 155, 155, 0.555);
+margin:20px auto;
+width: 500px;
+padding: 20px;
+border: 1px solid #000000;
+}
+.post {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.post .title {
+    font-weight: bold;
+}
+.post .content {
+    margin-top: 5px;
+}
+.post .date {
+    font-size: 12px;
+    color: #888;
+}
+
+.user-info{
+    position: fixed;
+    top:50px;
+    right:20px;
+    width:200px;
+    height: 20px;
+    background-color:inherit ;
+    text-align: right;
 }

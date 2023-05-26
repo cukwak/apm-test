@@ -1,22 +1,42 @@
-html,body{
+
+body {
     background-color: lightgray;
 }
 
 hr{height: 5px; background-color:black}
-.column{
-    border-left: thick solid #000;
-    height:100%;
-    left: 70%;
-    position: absolute;
-   }
-#main{
-    background-color: rgba(0, 0, 0, 0.255);
-    margin-left: 3%;
-    margin-right: 20%;
 
+.container {
+    background-color: rgba(155, 155, 155, 0.555);
+    margin:20px auto;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
 }
-#main1{
-    background-color: rgba(0, 0, 0, 0.255);
-    margin-left: 85%;
-    text-align: center;
+.post {
+    margin-bottom: 15px;
+}
+.post label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.post input[type="text"],
+.post textarea {
+    width: calc(100% - 20px); 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.post textarea {
+    resize: vertical;
+    height: 100px;
+}
+.user-info{
+    position: fixed;
+    top:50px;
+    right:15px;
+    width:200px;
+    height: 20px;
+    background-color:inherit ;
 }
