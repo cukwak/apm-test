@@ -1,10 +1,8 @@
 <?php
-session_start();
 $conn = mysqli_connect('localhost', 'test', '1234','test');
 
-$sql = "INSERT INTO post(username,title, description created)
-        VALUES ('{$_SESSION['username']},                
-                '{$_POST['title']}',
+$sql = "INSERT INTO post(title, description created)
+        VALUES ('{$_POST['title']}',
                 '{$_POST['description']}',
                 NOW()
         )";
@@ -13,6 +11,7 @@ if($result == false){
     echo "<script>
             alert('post failed');
           </script>";
+        error_log(mysqli_error($conn));
 }else{
     echo"<script> location.replace('main.php'); </script>;";
 }

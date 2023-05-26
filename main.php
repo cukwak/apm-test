@@ -1,11 +1,7 @@
 <?php
 session_start();
-$sessionId = session_id();
 $conn = mysqli_connect('localhost', 'test', '1234','test');
 mysqli_set_charset($conn, 'utf8'); 
-$sql = "SELECT * FROM users WHERE session_id = '$sessionId'";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +22,9 @@ $row = mysqli_fetch_assoc($result);
         </a>
     </div>
         <div class = "write">
+            <a href="post.html">
             <input type ="button" value="Post">
+            </a>
         </div>
     <div class="container">
         <div class="post">

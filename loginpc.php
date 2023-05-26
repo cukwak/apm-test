@@ -17,7 +17,7 @@ if($list) {
     $_SESSION['password'] = $password;
     echo "<script>
         alert('Successfully logined.');
-        location.replace('main.html');
+        location.replace('main.php');
         </script>";
 }else{
     echo "<script>
