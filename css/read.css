@@ -4,7 +4,7 @@ body {
     padding: 20px;
 }
 
-hr:first-child{height: 5px; background-color:black}
+hr{height: 5px; background-color:black}
 
 
 .container {

@@ -14,7 +14,7 @@ $arr = mysqli_fetch_array($result);
     <meta charset="UTF-8">
     <title><?=$_SESSION['title']?></title>
     <link rel="stylesheet" href="css/read.css">
-    <h3>Sever Management</h3><hr>
+    <h2>Sever Management</h2><hr>
 </head>
 <body>
     <div class="user-info">
@@ -42,7 +42,7 @@ $arr = mysqli_fetch_array($result);
     
     <div class="container">
         <form class="post">
-            <h3><?=$arr['title']?></h3><hr>
+            <h3><?=$arr['title']?></h3>
             <span><?=$arr['description']?></span>
         </form>
     </div>
