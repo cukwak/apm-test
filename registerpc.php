@@ -3,7 +3,7 @@ $username = $_POST['username'];
 $id = $_POST['id'];
 $password = $_POST['password'];
 
-$conn = mysqli_connect("localhost", "test", "1234", "test");
+$conn = mysqli_connect("localhost", "test", "1234", "sm");
 mysqli_set_charset($conn, 'utf8');
 $sql = "INSERT INTO users (username, id, password, created)
         VALUES ('$username', '$id', '$password', now())";

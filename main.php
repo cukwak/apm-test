@@ -1,11 +1,11 @@
 <?php
 session_start();
-$conn = mysqli_connect('localhost', 'test', '1234','test');
+$conn = mysqli_connect('localhost', 'test', '1234','sm');
 mysqli_set_charset($conn, 'utf8'); 
-$sql = "SELECT * FROM post ORDER BY post DESC";
+$sql = "SELECT * FROM post ORDER BY id DESC";
 $result = mysqli_query($conn, $sql);
 $count = mysqli_num_rows($result);
-$arr = mysqli_fetch_array($result);
+
 
 ?>
 
@@ -41,7 +41,7 @@ $arr = mysqli_fetch_array($result);
                 <th>Created</th>
             </tr>
             <? if ($result){
-                while ($arr){
+                while ($arr = mysqli_fetch_array($result)){
                     $list = $arr['id'];
              ?>
             <tr>

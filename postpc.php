@@ -1,7 +1,7 @@
 <?php
-$conn = mysqli_connect('localhost', 'test', '1234','test');
+$conn = mysqli_connect('localhost', 'test', '1234','sm');
 
-$sql = "INSERT INTO post(title, description created)
+$sql = "INSERT INTO post(title, description, created)
         VALUES ('{$_POST['title']}',
                 '{$_POST['description']}',
                 NOW()

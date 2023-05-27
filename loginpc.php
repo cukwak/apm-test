@@ -2,7 +2,7 @@
 $id = $_POST['id'];
 $password = $_POST['password'];
 
-$conn =  mysqli_connect("localhost", "test", "1234", "test");
+$conn =  mysqli_connect("localhost", "test", "1234", "sm");
 mysqli_set_charset($conn, 'utf8');
 $sql = "SELECT * FROM users where id = '$id' && password = '$password';";
 $result = mysqli_query($conn, $sql);
