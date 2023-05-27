@@ -2,6 +2,11 @@
 session_start();
 $conn = mysqli_connect('localhost', 'test', '1234','test');
 mysqli_set_charset($conn, 'utf8'); 
+$sql = "SELECT * FROM post ORDER BY post DESC";
+$result = mysqli_query($conn, $sql);
+$count = mysqli_num_rows($result);
+$arr = mysqli_fetch_array($result);
+
 ?>
 
 <!DOCTYPE html>
@@ -28,12 +33,27 @@ mysqli_set_charset($conn, 'utf8');
         </div>
     <div class="container">
         <div class="post">
-            <div class="title">첫 번째 게시물</div>
-            <div class="content">
-                첫 번째 게시물 내용입니다.
-            </div>
-            <div class="date">작성일: 2023-05-26</div>
+            <table>
+            <tr>
+                <th>Num</th>
+                <th>Title</th>
+                <th>Writer</th>
+                <th>Created</th>
+            </tr>
+            <? if ($result){
+                while ($arr){
+                    $list = $arr['id'];
+             ?>
+            <tr>
+                <th><?=$count--?></th>
+                <th><a href="read.php?data=<?$id?>"><?=$arr['title']?></a></th>
+                <th><?=$arr['username']?></th>
+                <th><?=$arr['created']?></th>
+            </tr>
+            <?}}?>
+            </table>
         </div>
+        
     </div>
 </body>
 </html>
