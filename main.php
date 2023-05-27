@@ -37,21 +37,23 @@ mysqli_set_charset($conn, 'utf8');
                 <th>Writer</th>
                 <th>Created</th>
             </tr>
-            <?
-            $sql = "SELECT * FROM post ORDER BY id DESC";
+            <?php
+            $sql = "SELECT * FROM post ORDER BY id DESC"; 
             $result = mysqli_query($conn, $sql);
-            $count = mysqli_num_rows($result);
-            if ($result){
-                while ($arr = mysqli_fetch_array($result)){
-                    $list = $arr['id'];
-             ?>
+            $count = mysqli_num_rows($result);   
+            if($result) {   
+                while ($arr = mysqli_fetch_array($result)) {
+                $listNum = $arr['id'];
+            ?>
             <tr>
-                <th><?=$count--?></th>
-                <th><a href="read.php?data=<?$id?>"><?=$arr['title']?></a></th>
+                <th><?=$count--?></th>  
+                <th><a href="read.php?data=<?=$listNum?>"><?=$arr['title']?></a></th>
                 <th><?=$_SESSION['username']?></th>
                 <th><?=$arr['created']?></th>
             </tr>
-            <?}}?>
+            <?php
+                }
+            }?>
             </table>
         </div>
         
