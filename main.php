@@ -5,7 +5,7 @@ mysqli_set_charset($conn, 'utf8');
 $sql = "SELECT * FROM post ORDER BY id DESC";
 $result = mysqli_query($conn, $sql);
 $count = mysqli_num_rows($result);
-
+$arr = mysqli_fetch_array($result)
 
 ?>
 
@@ -19,12 +19,12 @@ $count = mysqli_num_rows($result);
 </head>
 <body>
     <div class="user-info">
-        <span>
-           <? echo "username; ".$row['username'];?>
-        </span>
-        <a href="logout.php">
-        <input type="button" value="logout" onclick="alert">
-        </a>
+        <table>
+        <tr>
+            <th><?=$_SESSION['username']?></th>
+            <th><a href="logout.php"><input type="button" value="logout" onclick="alert"></a></th>
+        </tr>
+        </table>
     </div>
         <div class = "write">
             <a href="post.html">
@@ -41,13 +41,13 @@ $count = mysqli_num_rows($result);
                 <th>Created</th>
             </tr>
             <? if ($result){
-                while ($arr = mysqli_fetch_array($result)){
+                while ($arr){
                     $list = $arr['id'];
              ?>
             <tr>
                 <th><?=$count--?></th>
                 <th><a href="read.php?data=<?$id?>"><?=$arr['title']?></a></th>
-                <th><?=$arr['username']?></th>
+                <th><?=$_SESSION['username']?></th>
                 <th><?=$arr['created']?></th>
             </tr>
             <?}}?>

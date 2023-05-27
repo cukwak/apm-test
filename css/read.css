@@ -1,7 +1,6 @@
+
 body {
     background-color: lightgray;
-    margin: 0;
-    padding: 20px;
 }
 
 hr{height: 5px; background-color:black}
@@ -9,15 +8,13 @@ hr{height: 5px; background-color:black}
 .container {
     background-color: rgba(155, 155, 155, 0.555);
     margin:20px auto;
-    width: 1300px;
+    width: 500px;
     padding: 20px;
     border: 1px solid #000000;
-    }
- 
+    border-radius: 5px;
+}
 .post {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .post label {
     display: block;
@@ -42,4 +39,12 @@ hr{height: 5px; background-color:black}
     width:200px;
     height: 20px;
     background-color:inherit ;
+}
+.write{
+    position: fixed;
+    top:90px;
+    right:20px;
+    width:200px;
+    height: 20px;
+    text-align: right;
 }

@@ -11,7 +11,7 @@ h1 {
 .container {
 background-color: rgba(155, 155, 155, 0.555);
 margin:20px auto;
-width: 500px;
+width: 1300px;
 padding: 20px;
 border: 1px solid #000000;
 }
@@ -40,7 +40,18 @@ border: 1px solid #000000;
     background-color:inherit ;
     text-align: right;
 }
-
+th:nth-child(1){
+    width:40;
+}
+th:nth-child(2){
+    width:800;
+}
+th:nth-child(3){
+    width:60;
+}
+th:nth-child(4){
+    width:400;
+}
 .write{
     position: fixed;
     top:90px;

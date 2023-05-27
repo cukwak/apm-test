@@ -1,4 +1,5 @@
 <?php
+session_start();
 $conn = mysqli_connect('localhost', 'test', '1234','sm');
 
 $sql = "INSERT INTO post(title, description, created)
@@ -14,5 +15,6 @@ if($result == false){
         error_log(mysqli_error($conn));
 }else{
     echo"<script> location.replace('main.php'); </script>;";
+    $_SESSION['title'] = $_POST['title'];
 }
 ?>
