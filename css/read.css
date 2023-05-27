@@ -4,7 +4,8 @@ body {
     padding: 20px;
 }
 
-hr{height: 5px; background-color:black}
+hr:first-child{height: 5px; background-color:black}
+
 
 .container {
     background-color: rgba(155, 155, 155, 0.555);
@@ -39,7 +40,7 @@ hr{height: 5px; background-color:black}
     position: fixed;
     top:50px;
     right:15px;
-    width:200px;
+    width:100px;
     height: 20px;
     background-color:inherit ;
 }
@@ -56,4 +57,12 @@ hr{height: 5px; background-color:black}
 .date {
   font-style: italic;
   color: #888888;
+}
+.write{
+    position: fixed;
+    top:100px;
+    right:20px;
+    width:200px;
+    height: 20px;
+    text-align: right;
 }

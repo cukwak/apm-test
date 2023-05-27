@@ -41,20 +41,10 @@ $arr = mysqli_fetch_array($result);
 
     
     <div class="container">
-        <div class="post">
-            <div class="title">
-                <?=$arr['title']
-                ?>
-            </div>
-            <div class="content">
-                <?=$arr['description']
-                ?>
-            </div>
-            <div class="date">
-                <?=$arr['created']
-                ?>
-            </div>
-        </div>
+        <form class="post">
+            <h3><?=$arr['title']?></h3><hr>
+            <span><?=$arr['description']?></span>
+        </form>
     </div>
 
 </body>
