@@ -41,17 +41,20 @@ $arr = mysqli_fetch_array($result);
 
     
     <div class="container">
-        <form action="postpc.php" method="POST">
-            <div class="post">
-                <label for="title">Title</label>
-                <input type="text" id="title" name="title" placeholder="Title" required>
+        <div class="post">
+            <div class="title">
+                <?=$arr['title']
+                ?>
             </div>
-            <div class="post">
-                <label for="description">description</label>
-                <textarea id="description" name="description" placeholder="Contents" required></textarea>
+            <div class="content">
+                <?=$arr['description']
+                ?>
             </div>
-                <button type="submit">submit</button>
-        </form>
+            <div class="date">
+                <?=$arr['created']
+                ?>
+            </div>
+        </div>
     </div>
 
 </body>

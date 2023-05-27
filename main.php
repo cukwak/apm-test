@@ -15,7 +15,7 @@ $arr = mysqli_fetch_array($result)
     <meta charset="UTF-8">
     <title>Board</title>
     <link rel="stylesheet" href="css/main.css">
-    <h3>Sever Management</h3><hr>
+    <h2>Sever Management</h2><hr>
 </head>
 <body>
     <div class="user-info">

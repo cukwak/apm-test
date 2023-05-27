@@ -5,13 +5,10 @@ body {
 }
 hr{height: 5px; background-color:black}
 
-h1 {
-    text-align: center;
-}
 .container {
 background-color: rgba(155, 155, 155, 0.555);
-margin:20px auto;
-width: 1300px;
+margin:30px 45px;
+width: auto;
 padding: 20px;
 border: 1px solid #000000;
 }
@@ -33,28 +30,28 @@ border: 1px solid #000000;
 
 .user-info{
     position: fixed;
-    top:50px;
+    top:60px;
     right:20px;
-    width:200px;
+    width:100px;
     height: 20px;
     background-color:inherit ;
     text-align: right;
 }
 th:nth-child(1){
-    width:40;
+    width:100px;
 }
 th:nth-child(2){
-    width:800;
+    width:800px;
 }
 th:nth-child(3){
-    width:60;
+    width:100px;
 }
 th:nth-child(4){
-    width:400;
+    width:800px;
 }
 .write{
     position: fixed;
-    top:90px;
+    top:100px;
     right:20px;
     width:200px;
     height: 20px;
