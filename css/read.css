@@ -38,7 +38,7 @@ hr:first-child{height: 5px; background-color:black}
 }
 .user-info{
     position: fixed;
-    top:50px;
+    top:60px;
     right:15px;
     width:100px;
     height: 20px;
@@ -62,7 +62,7 @@ hr:first-child{height: 5px; background-color:black}
     position: fixed;
     top:100px;
     right:20px;
-    width:200px;
+    width:110px;
     height: 20px;
     text-align: right;
 }
