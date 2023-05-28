@@ -5,7 +5,7 @@ $conn = mysqli_connect('localhost', 'test', '1234','sm');
 $sql = "INSERT INTO post(title, description, writer, created)
         VALUES ('{$_POST['title']}',
                 '{$_POST['description']}',
-                '{$_SESSION['username']},
+                '{$_SESSION['username']}',
                 NOW()
         )";
 $result = mysqli_query($conn,$sql);
