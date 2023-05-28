@@ -33,8 +33,7 @@ $arr = mysqli_fetch_array($result);
         <a href="main.php">
         <input type="button" value="back"onclick="arlert">
     </a></th><th>
-        <a href="reform.php">
-        <input type="button" value="reform"onclick="arlert">
+        <input type="button" value="delete"onclick="deleteConfirm()">
     </a></th></tr>
     </table>
     </div>
@@ -46,6 +45,14 @@ $arr = mysqli_fetch_array($result);
             <span><?=$arr['description']?></span>
         </form>
     </div>
-
+    <script>
+        function deleteConfirm() {
+            if(confirm("really dlete this post?")){
+                location.href="delete.php?id=<?=$id?>";
+            }else{
+                alert("canceled.");
+            }
+        }
+    </script>
 </body>
 </html>

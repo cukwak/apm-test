@@ -48,7 +48,7 @@ mysqli_set_charset($conn, 'utf8');
             <tr>
                 <th><?=$count--?></th>  
                 <th><a href="read.php?data=<?=$listNum?>"><?=$arr['title']?></a></th>
-                <th><?=$_SESSION['username']?></th>
+                <th><?=$arr['writer']?></th>
                 <th><?=$arr['created']?></th>
             </tr>
             <?php

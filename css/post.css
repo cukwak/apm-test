@@ -8,7 +8,7 @@ hr{height: 5px; background-color:black}
 
 .container {
     background-color: rgba(155, 155, 155, 0.555);
-    margin:30px 45px;
+    margin:40px 45px;
     width: auto;
     padding: 20px;
     border: 1px solid #000000;
@@ -42,4 +42,12 @@ hr{height: 5px; background-color:black}
     width:200px;
     height: 20px;
     background-color:inherit ;
+}
+.write{
+    position: fixed;
+    top:100px;
+    right:20px;
+    width:80px;
+    height: 20px;
+    text-align: right;
 }

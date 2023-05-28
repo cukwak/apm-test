@@ -2,9 +2,10 @@
 session_start();
 $conn = mysqli_connect('localhost', 'test', '1234','sm');
 
-$sql = "INSERT INTO post(title, description, created)
+$sql = "INSERT INTO post(title, description, writer, created)
         VALUES ('{$_POST['title']}',
                 '{$_POST['description']}',
+                '{$_SESSION['username']},
                 NOW()
         )";
 $result = mysqli_query($conn,$sql);
