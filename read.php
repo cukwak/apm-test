@@ -47,22 +47,17 @@ $arr = mysqli_fetch_array($result);
     </div>
     <script>
         function deleteConfirm() {
-            if(confirm("really dlete this post?")){
-                if($arr['writer'] == $_SESSION['username']){
-                location.href="delete.php?id=<?=$id?>";
-                }else{
-                    <?echo
-                    "<script>
-                    alert('You have no authority');
-                    lication.replace('main.php');
-                    </script>";
-                    ?>
+            if (confirm("Really delete this post?")) {
+                if ("<?=$arr['writer']?>" === "<?=$_SESSION['username']?>") {
+                    location.href = "delete.php?id=<?=$id?>";
+                } else {
+                    alert("You have no authority");
+                    location.replace('main.php');
                 }
-            }else{
-                alert("canceled.");
+            } else {
+                alert("Canceled.");
             }
         }
-    
     </script>
 </body>
 </html>
