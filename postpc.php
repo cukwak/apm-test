@@ -1,6 +1,7 @@
 <?php
 session_start();
 $conn = mysqli_connect('localhost', 'test', '1234','sm');
+mysqli_set_charset($conn, 'utf8'); 
 
 $sql = "INSERT INTO post(title, description, writer, created)
         VALUES ('{$_POST['title']}',
