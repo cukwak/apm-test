@@ -10,7 +10,7 @@ mysqli_set_charset($conn, 'utf8');
     <meta charset="UTF-8">
     <title>Board</title>
     <link rel="stylesheet" href="css/main.css">
-    <h2>Sever Management</h2><hr>
+    <h2>Server Management</h2><hr>
 </head>
 <body>
     <div class="user-info">

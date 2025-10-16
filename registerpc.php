@@ -10,7 +10,7 @@ $sql = "INSERT INTO users (username, id, password, created)
 
 if(mysqli_query($conn, $sql)){
     echo "<script>
-        alert('Sucessfully registered');
+        alert('Successfully registered');
         location.replace('index.php');
         </script>";
 }

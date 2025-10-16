@@ -8,7 +8,7 @@
 <body>
     <div class = "main" ><br>
         <div class = "main-1">
-            Sever Management
+            Server Management
         </div><br>
         <a href = "register.html">        
             <input type = "button" value="register" onclick="alert">

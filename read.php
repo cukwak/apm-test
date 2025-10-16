@@ -14,7 +14,7 @@ $arr = mysqli_fetch_array($result);
     <meta charset="UTF-8">
     <title><?=$_SESSION['title']?></title>
     <link rel="stylesheet" href="css/read.css">
-    <h2>Sever Management</h2><hr>
+    <h2>Server Management</h2><hr>
 </head>
 <body>
     <div class="user-info">
@@ -31,7 +31,7 @@ $arr = mysqli_fetch_array($result);
     <table>
     <tr><th>
         <a href="main.php">
-        <input type="button" value="back"onclick="arlert">
+        <input type="button" value="back"onclick="alert">
     </a></th><th>
         <input type="button" value="delete"onclick="deleteConfirm()">
     </a></th></tr>

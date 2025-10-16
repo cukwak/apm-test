@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-unset($_SESSION['userID']);
-unset($_SESSION['userName']);
-unset($_SESSION['userPW']);
+unset($_SESSION['id']);
+unset($_SESSION['username']);
+unset($_SESSION['password']);
 
 echo "<script>
         location.replace('index.php');
