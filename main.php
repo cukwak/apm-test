@@ -47,9 +47,9 @@ mysqli_set_charset($conn, 'utf8');
             ?>
             <tr>
                 <th><?=$count--?></th>  
-                <th><a href="read.php?data=<?=$listNum?>"><?=$arr['title']?></a></th>
-                <th><?=$arr['writer']?></th>
-                <th><?=$arr['created']?></th>
+                <th><a href="read.php?data=<?=$listNum?>"><?=htmlspecialchars($arr['title'], ENT_QUOTES, 'UTF-8')?></a></th>
+                <th><?=htmlspecialchars($arr['writer'], ENT_QUOTES, 'UTF-8')?></th>
+                <th><?=htmlspecialchars($arr['created'], ENT_QUOTES, 'UTF-8')?></th>
             </tr>
             <?php
                 }

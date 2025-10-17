@@ -2,15 +2,20 @@
 $id = $_POST['id'];
 $password = $_POST['password'];
 
-$conn =  mysqli_connect("localhost", "test", "1234", "sm");
+$conn = mysqli_connect("localhost", "test", "1234", "sm");
 mysqli_set_charset($conn, 'utf8');
-$sql = "SELECT * FROM users where id = '$id' && password = '$password';";
-$result = mysqli_query($conn, $sql);
-$list = mysqli_num_rows($result);
+
+// Prepared Statement 사용으로 SQL Injection 방지
+$sql = "SELECT * FROM users WHERE id = ?";
+$stmt = mysqli_prepare($conn, $sql);
+mysqli_stmt_bind_param($stmt, "s", $id);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 $arr = mysqli_fetch_array($result);
 
 echo"<br><br>";
-if($list) {
+// 암호화된 비밀번호 검증
+if($arr && password_verify($password, $arr['password'])) {
     session_start();
     $_SESSION['username'] = $arr['username'];
     $_SESSION['id'] = $id;
@@ -26,4 +31,6 @@ if($list) {
         </script>";
 }
 
+mysqli_stmt_close($stmt);
+mysqli_close($conn);
 ?>
